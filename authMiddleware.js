@@ -30,6 +30,7 @@ module.exports = function (req, res, next) {
                 jwt.verify(token, APP_SECRET);
                 next();
                 return;
+                // eslint-disable-next-line no-empty
             } catch (err) {
             }
         }
