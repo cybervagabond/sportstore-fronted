@@ -11,7 +11,7 @@
             {{ line.product.price | currency }}
         </td>
         <td class="text-right">
-            {{ (line.quantity *line.product.price ) | currency }}
+            {{ (line.quantity * line.product.price) | currency }}
         </td>
         <td class="text-center">
             <button class="btn btn-sm btn-danger"
@@ -24,7 +24,7 @@
 <script>
     export default {
         props: ["line"],
-        data: function () {
+        data: function() {
             return {
                 qvalue: this.line.quantity
             }
