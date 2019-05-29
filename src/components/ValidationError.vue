@@ -11,7 +11,7 @@
             show() {
                 return this.validation.$dirty && this.validation.$invalid
             },
-            messaes() {
+            messages() {
                 let messages = [];
                 if (this.validation.$dirty) {
                     if (this.hasValidationError("required")) {

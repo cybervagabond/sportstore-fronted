@@ -11,7 +11,7 @@
             <div class="form-group m-2">
                 <label>Name</label>
                 <input v-model="$v.order.name.$model" class="form-control "/>
-                <validation-error v-bind:validation="$v.order.name"/>
+                <validation-error v-bind:validation="$v.order.name" />
             </div>
         </div>
 
@@ -19,7 +19,7 @@
             <div class="form-group m-2">
                 <label>Email</label>
                 <input v-model="$v.order.email.$model" class="form-control "/>
-                <validation-error v-bind:validation="$v.order.email"/>
+                <validation-error v-bind:validation="$v.order.email" />
             </div>
         </div>
 
@@ -27,7 +27,7 @@
             <div class="form-group m-2">
                 <label>Address</label>
                 <input v-model="$v.order.address.$model" class="form-control "/>
-                <validation-error v-bind:validation="$v.order.address"/>
+                <validation-error v-bind:validation="$v.order.address" />
             </div>
         </div>
 
@@ -35,7 +35,7 @@
             <div class="form-group m-2">
                 <label>City</label>
                 <input v-model="$v.order.city.$model" class="form-control "/>
-                <validation-error v-bind:validation="$v.order.city"/>
+                <validation-error v-bind:validation="$v.order.city" />
             </div>
         </div>
 
@@ -43,7 +43,7 @@
             <div class="form-group m-2">
                 <label>Zip</label>
                 <input v-model="$v.order.zip.$model" class="form-control "/>
-                <validation-error v-bind:validation="$v.order.zip"/>
+                <validation-error v-bind:validation="$v.order.zip" />
             </div>
         </div>
 
@@ -59,13 +59,12 @@
 </template>
 
 <script>
-    import {required, email} from "vuelidate/lib/validators";
-    import ValidationError from "./ValidationError";
-    import {mapActions} from "vuex";
-
+    import { required, email } from "vuelidate/lib/validators";
+    import ValidationError  from "./ValidationError";
+    import { mapActions } from "vuex";
     export default {
-        components: {ValidationError},
-        data: function () {
+        components: { ValidationError },
+        data: function() {
             return {
                 order: {
                     name: null,
@@ -78,11 +77,11 @@
         },
         validations: {
             order: {
-                name: {required},
-                email: {required, email},
-                address: {required},
-                city: {required},
-                zip: {required}
+                name: { required },
+                email: { required, email },
+                address: { required },
+                city: { required },
+                zip: { required }
             }
         },
         methods: {
